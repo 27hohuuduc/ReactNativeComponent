@@ -1,0 +1,32 @@
+{
+  "name": "react-native-component",
+  "version": "1.2.2",
+  "displayName": "React Native Component",
+  "repository": "https://github.com/27hohuuduc/ReactNativeComponent",
+  "description": "CLI for React Native, supports generating all of necessary stuff in components.",
+  "license": "Apache-2.0",
+  "author": "DucHo <contact@hohuuduc.com>",
+  "bugs": {
+    "email": "help@hohuuduc.com",
+    "url": "https://github.com/27hohuuduc/ReactNativeComponent/issues"
+  },
+  "keywords": [
+    "cli",
+    "react-native"
+  ],
+  "bin": {
+    "react-native-component": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "ncc build ./src/index.ts -w -o dist/",
+    "build": "ncc build ./src/index.ts -o ./dist/ --minify --no-cache --no-source-map-register"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@vercel/ncc": "^0.38.1",
+    "typescript": "^5.4.5"
+  }
+}
